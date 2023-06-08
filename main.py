@@ -3,7 +3,6 @@
 # Author     : QIN2DIM
 # Github     : https://github.com/QIN2DIM
 # Description:
-
 import json
 import os
 from dataclasses import dataclass
@@ -101,7 +100,6 @@ class GoogleOAuth(View):
                 f'You need to <a href="{_href}">authorize</a> '
                 f"before testing the code to revoke credentials."
             )
-
         credentials = GoogleOAuthCredentials(**flask.session[self._credentials])
         resp = requests.post(
             "https://oauth2.googleapis.com/revoke",
